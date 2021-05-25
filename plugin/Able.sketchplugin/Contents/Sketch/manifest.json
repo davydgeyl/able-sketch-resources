@@ -1,0 +1,99 @@
+{
+	"name": "Able",
+	"description": "All Able tools for Telstra designers in one place.",
+	"author": "Able Design System",
+	"version": "5.0",
+    "icon": "icon.png",
+	"identifier": "com.able.sketch",
+	"appcast": "https://github.com/davydgeyl/able-sketch-resources/blob/main/rss/able_plugin.xml?raw=true",
+	"commands": [
+		{
+			"name": "Update Libraries & Templates",
+			"identifier": "updateFiles",
+			"shortcut": "cmd shift u",
+			"script": "updateFiles.js",
+			"handler": "updateFiles"
+		},
+		{
+			"name": "Annotate Selection",
+			"identifier": "addAnnotation",
+			"shortcut": "cmd shift 8",
+			"script": "annotation.js",
+			"handler": "addAnnotation"
+		},
+		{
+			"name": "Convert to Dark Mode",
+			"identifier": "convertToDarkMode",
+			"shortcut": "cmd shift D",
+			"script": "dark.js",
+			"handler": "convertToDarkMode"
+		},
+		{
+			"name": "Hide Spacings",
+			"identifier": "hideSpacings",
+			"shortcut": "cmd shift 9",
+			"script": "spacings.js",
+			"handler": "hideSpacings"
+		},
+		{
+			"name": "Show Spacings",
+			"identifier": "showSpacings",
+			"shortcut": "cmd shift 0",
+			"script": "spacings.js",
+			"handler": "showSpacings"
+		},
+		{
+			"name": "Android and Web 2x Size",
+			"identifier": "increaseAndroidAndWebTextSize",
+			"script": "textsize.js",
+			"handler": "increaseAndroidAndWebTextSize"
+		},
+		{
+			"name": "iOS XXXL Size",
+			"identifier": "increaseiOSXXXLTextSize",
+			"script": "textsize.js",
+			"handler": "increaseiOSXXXLTextSize"
+		},
+		{
+			"name": "iOS AX5 Size",
+			"identifier": "increaseiOSAX5TextSize",
+			"script": "textsize.js",
+			"handler": "increaseiOSAX5TextSize"
+		},
+		{
+			"name": "Reset Text Size",
+			"identifier": "resetTextSize",
+			"script": "textsize.js",
+			"handler": "resetTextSize"
+		},
+		{
+			"name": "Check Library Version",
+			"identifier": "checkVersion",
+			"script": "version.js",
+			"handler": "checkVersion"
+		}
+	],
+	"menu": {
+		"items": [
+			"updateFiles",
+			"addAnnotation",
+			"-",
+			"convertToDarkMode",
+			"-",
+			"hideSpacings",
+			"showSpacings",
+			"-",
+			{
+				"title": "Accessibility",
+				"items": [
+					"increaseAndroidAndWebTextSize",
+					"increaseiOSXXXLTextSize",
+					"increaseiOSAX5TextSize",
+					"resetTextSize"
+		       ]
+			},
+			"-",
+			"checkVersion"
+		]
+	}
+}
